@@ -1,78 +1,100 @@
-# Diarrhea-Prediction-Model
+# Environmental Determinants of Diarrheal Disease: A Multi-Regional Analysis in Bangladesh
 
-## Project Overview
+## Overview
+This research project analyzes the relationship between environmental factors and diarrheal disease incidence across four major divisions in Bangladesh. Using machine learning models and time series analysis, the study explores how environmental variables influence disease patterns and develops predictive models for public health applications.
 
-This project analyzes and predicts diarrhea cases using historical data from four divisions in Bangladesh: Rajshahi, Khulna, Dhaka, and Chattogram. The goal is to explore trends, identify significant correlations with weather variables, and create predictive models for better disease management.
+## Key Features
+- Multi-regional data analysis covering Rajshahi, Khulna, Dhaka, and Chattogram divisions
+- Interactive visualization of disease patterns and environmental correlations
+- Time series decomposition and seasonal trend analysis
+- Predictive modeling using various machine learning algorithms
+- Interactive web dashboard for data exploration and model predictions
 
-## Features
+## Technologies Used
+- **Data Analysis**: Python, Pandas, NumPy
+- **Machine Learning**: Scikit-learn, Random Forest, Gradient Boosting
+- **Visualization**: Plotly, Seaborn, Matplotlib
+- **Web Dashboard**: Streamlit
+- **Time Series Analysis**: Statsmodels
 
-- **Data Exploration**: Examines trends in diarrhea cases across regions and their relationship with weather variables like temperature, humidity, and precipitation.
-- **Data Cleaning**: Implements robust methods to handle outliers while preserving seasonal and trend components.
-- **Time Series Analysis**: Decomposes diarrhea cases into seasonal, trend, and residual components for better understanding.
-- **Machine Learning Models**: Predicts diarrhea cases using Linear Regression, Random Forest, Support Vector Regression (SVR), and Decision Tree.
-- **Visualization**: Provides visual insights through line plots, heatmaps, and decomposition graphs.
+## Data Sources
+The study utilizes data from four divisions in Bangladesh, including:
+- Daily diarrheal disease cases
+- Environmental parameters:
+  - Maximum temperature
+  - Minimum temperature
+  - Humidity
+  - Precipitation
 
-### Data Sources
+Data source: [Data-Lab-CU/diarrhea](https://github.com/Data-Lab-CU/diarrhea/tree/main/data)
 
-- **Regions**: Rajshahi, Khulna, Dhaka, and Chattogram.
-- **Variables**: Diarrhea cases, minimum/maximum temperature, humidity, and precipitation.
+## Analysis Components
+1. **Data Preprocessing**
+   - Outlier detection and handling
+   - Missing value treatment
+   - Feature engineering
 
-## Installation
+2. **Exploratory Data Analysis**
+   - Regional comparison of disease patterns
+   - Seasonal trend analysis
+   - Environmental factor correlations
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/diarrhea-prediction.git
-   cd diarrhea-prediction
-   ```
-2. Install required Python packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+3. **Predictive Modeling**
+   - Implementation of multiple ML algorithms
+   - Model performance comparison
+   - Feature importance analysis
 
-## Usage
+4. **Interactive Dashboard**
+   - Real-time data visualization
+   - Model prediction interface
+   - Time series analysis tools
 
-1. Load datasets:
-   - Update data paths in `diarrhea_analysis.py` or use the linked GitHub source.
-2. Run the script to perform:
-   - Data preprocessing and cleaning.
-   - Exploratory data analysis (EDA).
-   - Time series decomposition.
-   - Machine learning model training and evaluation.
-3. Visualizations will be generated and displayed in interactive plots.
+## Installation and Usage
 
-## Workflow
+### Prerequisites
+```bash
+Python 3.8+
+pip install -r requirements.txt
+```
 
-1. **Data Preprocessing**:
-   - Combines datasets for all divisions.
-   - Handles missing values and performs outlier detection.
+### Running the Dashboard
+```bash
+streamlit run app.py
+```
 
-2. **Exploratory Data Analysis (EDA)**:
-   - Identifies trends in diarrhea cases across regions.
-   - Examines correlations between weather variables and diarrhea cases.
+### Project Structure
+```
+diarrhea-env-analysis/
+│
+├── app.py                 # Streamlit dashboard
+├── requirements.txt       # Project dependencies
+├── notebooks/            
+│   └── analysis.ipynb    # Research analysis notebook
+├── datasets/                 # Data directory
+│   └── data.csv        # Data documentation
+└── README.md             # Project documentation
+```
 
-3. **Time Series Analysis**:
-   - Decomposes time series into seasonal, trend, and residual components.
+## Results and Insights
+- Identified lack of correlations between environmental factors and disease incidence
+- Developed predictive models with R² scores ranging from 0.2 to 0.5
+- Discovered few seasonal patterns in disease occurrence
+- Quantified the relative importance of different environmental factors
 
-4. **Machine Learning**:
-   - Trains predictive models using weather variables and trends.
+## Future Work
+- Integration of additional environmental parameters
+- Extension of analysis to other regions
+- Implementation of advanced time series models
+- Development of early warning systems
 
-5. **Visualization**:
-   - Generates plots to compare actual vs. predicted values.
+## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Results
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-- Minimum temperature showed the strongest correlation with diarrhea cases.
-- Random Forest outperformed other models in accuracy and predictive power.
+## Contact
+For any queries regarding this research, please open an issue in this repository.
 
-## Models
-
-| Model                     | Performance (R²) |
-|---------------------------|-------------------|
-| Linear Regression         | *0.8*    |
-| Random Forest             | *0.8*    |
-| Support Vector Regression | *0.7*    |
-| Decision Tree             | *0.6*    |
-
-## Contributions
-
-Feel free to contribute by submitting pull requests for enhancements or bug fixes. Suggestions for new features and improvements are welcome!
+## Acknowledgments
+- Research collaborators and advisors
