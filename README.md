@@ -26,8 +26,6 @@ The study utilizes data from four divisions in Bangladesh, including:
   - Humidity
   - Precipitation
 
-Data source: [Data-Lab-CU/diarrhea](https://github.com/Data-Lab-CU/diarrhea/tree/main/data)
-
 ## Analysis Components
 1. **Data Preprocessing**
    - Outlier detection and handling
